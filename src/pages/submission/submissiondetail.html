@@ -1,0 +1,144 @@
+<!--
+  Generated template for the SubmissiondetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.details}}
+      <ng-container *ngIf="submissionDetail.status == 'pending';">
+        <span item-left class="edit submission-edit" (click)="update_detail(submissionDetail.sub_subm_type_id, submissionDetail.project_id, submissionDetail.project_name, submissionDetail.submission_id, submissionDetail.title)">{{lang.edit}}</span>
+      </ng-container>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="cards-bg project-details">
+  <ng-container *ngIf="submissionDetail.title=='Stakeholder Information'; else elseTemplate">
+    <!--ion-item class="page-pj-tl sb">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-9>
+            <h2>{{ submissionDetail.project_name }}</h2>
+          </ion-col>
+          <ion-col col-3 text-right>
+            <span item-left class="date">{{submissionDetail.date}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item-->
+
+    <ion-item class="info-list sub-org-bar">
+      <!--h2>Reward expected</h2>
+			<ion-note item-end text-right>${{ submissionDetail.reward }}</ion-note-->
+      <h2>{{lang.stack_info}}</h2>
+    </ion-item>
+
+    <ng-container *ngIf="submissionDetail.photos_url=='null';  else elseTemplate">
+    </ng-container>
+    <ng-template #elseTemplate>
+      <ion-item class="info-list submission">
+        <p>{{lang.visiting_card}}</p>
+        <ion-col col-12>
+          <img src="{{submissionDetail.photos_url}}">
+        </ion-col>
+      </ion-item>
+    </ng-template>
+
+    <ion-item class="info-list submission">
+      <p>{{lang.comp_name}}</p>
+      <h2>{{ submissionDetail.company_name }}</h2>
+    </ion-item>
+
+    <ion-item class="info-list submission">
+      <p>{{lang.company_role}}</p>
+      <h2>{{ submissionDetail.company_role }}</h2>
+    </ion-item>
+
+    <ion-item class="info-list submission">
+      <p>{{lang.con_name}}</p>
+      <h2>{{ submissionDetail.contact_name }}</h2>
+    </ion-item>
+
+    <ion-item class="info-list submission">
+      <p>{{lang.con_phone}}</p>
+      <h2>{{ submissionDetail.contact_phone }}</h2>
+    </ion-item>
+
+    <ion-item class="info-list submission">
+      <p>{{lang.contact_email}}</p>
+      <h2>{{ submissionDetail.contact_email }}</h2>
+    </ion-item>
+
+    <ion-item class="info-list submission">
+        <p>{{lang.desc}}</p>
+        
+        <ng-container *ngIf="submissionDetail.description.length > 0; else elseTemplatedesc">
+            <h2>{{ submissionDetail.description}}</h2>
+        </ng-container>
+        <ng-template #elseTemplatedesc>
+            <h2>Not available{{lang.stack_info}}....</h2>
+        </ng-template>
+
+    </ion-item>
+
+    <ion-item class="info-list submission"></ion-item>
+  </ng-container>
+
+  <ng-template #elseTemplate>
+    <ion-card no-margin>
+      <ng-container *ngIf="submissionDetail.photos_url=='null'; else elseTemplate">
+        <ion-card-header>
+          <p class="no-found">
+            <strong>No {{type_title}} Found</strong>
+          </p>
+        </ion-card-header>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <!--ion-card-header>
+								<p class="no-found"><strong>{{type_title}}</strong></p>
+						</ion-card-header-->
+
+        <!--ion-item class="page-pj-tl sb">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-9>
+                <h2>{{ submissionDetail.project_name }}</h2>
+              </ion-col>
+              <ion-col col-3 text-right>
+                <span item-left class="date">{{submissionDetail.date}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item-->
+
+        <ion-item class="info-list sub-org-bar">
+          <h2>{{type_title}}</h2>
+        </ion-item>
+
+        <ion-row>
+          <ion-col col-12>
+            <img src="{{submissionDetail.photos_url}}">
+          </ion-col>
+        </ion-row>
+
+		<ng-container *ngIf="submissionDetail.comment==''; else elseTemplatecomment"></ng-container>
+		<ng-template #elseTemplatecomment>
+			<ion-item class="info-list sub-org-bar">
+				<h2>{{lang.comment}}</h2>
+			</ion-item>
+				<ion-list>
+						<ion-col col-12>
+						  <p style="padding: 4px;">{{submissionDetail.comment}}</p>
+						</ion-col>
+					</ion-list>
+		</ng-template>
+		
+		
+      </ng-template>
+    </ion-card>
+  </ng-template>
+</ion-content>

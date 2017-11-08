@@ -1,0 +1,64 @@
+/*page-map {
+
+}
+
+page-map .add-icon {
+	bottom: 50pt !important;
+}
+
+.give-info h2{font-weight:400;color:#757575;font-size:1.5rem !important;leter-spacing:1px;}
+*/
+
+ion-app._gmaps_cdv_ .nav-decor{
+  background-color: transparent !important;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.ion-page > ion-content {
+    position: relative !important;
+}
+
+.search_item{
+	max-height:300px;
+	overflow:auto;
+} 
+
+.item-md.item-block .item-inner{
+    border-bottom:none !important;
+}
+.hrdiviser{
+    border: 1px solid #dedede !important;
+    width: 100%;
+    float: left;
+}
+
+.list-border .loc-det {
+    white-space: normal;
+    font-size: 1.5rem;
+    width: 60%;
+    float: left;
+}
+
+
+page-map .show_single  .bt-nl{padding-left: 16px !important;}
+page-map .show_single .bt-nl ion-icon {
+	float: right;
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	background: #FFF;
+}
+
+.mp {
+	bottom: 20px !important;z-index: 9 !important;
+}
+
+.show_single .item-md p, .show_single .item-ios p{width: 70%;}

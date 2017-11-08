@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{lang.terms}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ng-container *ngIf="terms; else elseTemplate">
+      <ion-item padding-right *ngFor="let term of terms">
+        <!--p>{{term.content}}</p-->
+        <ng-container  *ngIf="lang_type == 'mys'; else elseTemplateContent">
+        <div [innerHTML] = "'' + term.content_ml + ''"></div>
+        </ng-container>
+        <ng-template #elseTemplateContent><div [innerHTML] = "'' + term.content + ''"></div></ng-template>
+      </ion-item>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <ion-item padding-right>
+            <p>No data found...</p>
+          </ion-item>
+    </ng-template>
+  </ion-list>
+</ion-content>

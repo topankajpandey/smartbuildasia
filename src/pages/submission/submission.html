@@ -1,0 +1,107 @@
+<ion-header>
+	<ion-navbar hideBackButton="true" persistent="true">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>{{lang.submission}}</ion-title>
+	</ion-navbar>
+    <ion-toolbar no-border-top>
+		<ion-segment [(ngModel)]="submission_tab">
+			<ion-segment-button value="All" (click)="getSubmitionList('all')">{{lang.all}}</ion-segment-button>
+			<ion-segment-button value="Pending" (click)="getSubmitionList('pending')">{{lang.pending}}</ion-segment-button>
+			<ion-segment-button value="Accepted" (click)="getSubmitionList('approved')">{{lang.accepted}}</ion-segment-button>
+			<ion-segment-button value="Partially Accepted" (click)="getSubmitionList('sub_approved')">{{lang.partially}}</ion-segment-button>
+			<ion-segment-button value="Rejected" (click)="getSubmitionList('rejected')">{{lang.rejected}}</ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="cards-bg add-project mysubmission">
+
+	<div [ngSwitch]="submission_tab">
+		<ion-list *ngSwitchCase="'All'">
+			<ng-container *ngIf="submissionList.length>0; else elseTemplate">
+				<ion-item *ngFor="let submission of submissionList" (click)="submission_detail(submission.subm_id, submission.title)" class="info-list">
+						<h2>{{ submission.title }}</h2>
+					  <p> {{ submission.description }} </p>
+					<ion-note item-end text-right><span>${{ submission.reward }}</span><br>{{ submission.date }}</ion-note>
+				</ion-item>				
+			</ng-container>
+			<ng-template #elseTemplate>
+				<ion-item class="info-list no-rec-found">
+					<p class="no-found">{{lang.no_record}}.</p>
+				</ion-item>	
+			</ng-template>
+		</ion-list>
+
+		<ion-list *ngSwitchCase="'Pending'">
+			<ng-container *ngIf="submissionList.length>0; else elseTemplate">
+					<ion-item *ngFor="let submission of submissionList" (click)="submission_detail(submission.subm_id, submission.title)" class="info-list">
+							<h2>{{ submission.title }}</h2>
+							<p> {{ submission.description }} </p>
+						<ion-note item-end text-right><span>${{ submission.reward }}</span><br>{{ submission.date }}</ion-note>
+					</ion-item>				
+				</ng-container>
+				<ng-template #elseTemplate>
+					<ion-item class="info-list no-rec-found">
+						<p class="no-found">{{lang.no_record}}.</p>
+					</ion-item>	
+				</ng-template>
+		</ion-list>
+
+		<ion-list *ngSwitchCase="'Accepted'">
+				<ng-container *ngIf="submissionList.length>0; else elseTemplate">
+						<ion-item *ngFor="let submission of submissionList" (click)="submission_detail(submission.subm_id, submission.title)" class="info-list">
+								<h2>{{ submission.title }}</h2>
+								<p> {{ submission.description }} </p>
+							<ion-note item-end text-right><span>${{ submission.reward }}</span><br>{{ submission.date }}</ion-note>
+						</ion-item>				
+					</ng-container>
+					<ng-template #elseTemplate>
+						<ion-item class="info-list no-rec-found">
+							<p class="no-found">{{lang.no_record}}.</p>
+						</ion-item>	
+					</ng-template>
+		</ion-list>
+		
+		<ion-list *ngSwitchCase="'Partially Accepted'">
+			<ng-container *ngIf="submissionList.length>0; else elseTemplate">
+				<ion-item *ngFor="let submission of submissionList" (click)="submission_detail(submission.subm_id, submission.title)" class="info-list">
+						<h2>{{ submission.title }} {{submission.subm_id}}</h2>
+					  <p> {{ submission.description }} </p>
+					<ion-note item-end text-right><span>${{ submission.reward }}</span><br>{{ submission.date }}</ion-note>
+				</ion-item>				
+			</ng-container>
+			<ng-template #elseTemplate>
+				<ion-item class="info-list no-rec-found">
+					<p class="no-found">{{lang.no_record}}.</p>
+				</ion-item>	
+			</ng-template>	
+		</ion-list>
+		
+		<ion-list *ngSwitchCase="'Rejected'">
+			<ng-container *ngIf="submissionList.length>0; else elseTemplate">
+				<ion-item *ngFor="let submission of submissionList" (click)="submission_detail(submission.subm_id, submission.title)" class="info-list">
+					<h2>{{ submission.title }}</h2>
+					<p> {{ submission.description }} </p>
+					<ion-note item-end text-right><span>${{ submission.reward }}</span><br>{{ submission.date }}</ion-note>
+				</ion-item>				
+			</ng-container>
+			<ng-template #elseTemplate>
+			  <ion-item class="info-list no-rec-found">
+          <p class="no-found">{{lang.no_record}}.</p>
+				</ion-item>	
+			</ng-template>			
+		</ion-list>
+		<!--ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+			<ion-infinite-scroll-content></ion-infinite-scroll-content>
+		</ion-infinite-scroll-->		
+	</div>
+</ion-content>
+
+<ion-footer>
+	<ion-item class="btns sub-btn">
+			<button ion-button full class="login-btn" (click)="give_info()"><ion-icon><i class="material-icons">playlist_add</i></ion-icon>&nbsp; {{lang.give_info}}	</button>
+		</ion-item>
+</ion-footer> 
+ 

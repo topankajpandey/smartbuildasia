@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{submit_title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg project-details">
+  <ion-card no-margin>
+    <ion-item class="page-pj-tl">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-9><h2>{{project_name}}</h2></ion-col>
+          <ion-col col-3><span item-left class="mile">{{distance}} km</span></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    
+    <!--ng-container *ngIf="galery_len>0; else elseTemplate1">
+      <ion-card-header>{{submit_title}}({{galery_len}})</ion-card-header>
+    </ng-container>
+    <ng-template #elseTemplate1>
+      <ion-card-header>{{submit_title}}</ion-card-header>
+    </ng-template-->
+    <ion-card-header>{{submit_title}}</ion-card-header>
+    
+    <ng-container *ngIf="base64Image; else elseTemplate2">
+      <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <img src="{{base64Image}}">
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ng-container>
+    <ng-template #elseTemplate2>      
+      <ion-list text-center class="list-info">
+          <div class="default-img"><img id="camera-image" src="assets/images/no-image.svg"></div>
+          <p class="img-head">{{lang.take_photo}} <br>{{lang.of_site}}</p>
+      </ion-list>
+    </ng-template>
+
+    <ion-list padding>
+      <ng-container *ngIf="base64Image; else elseTemplate3"> 
+        <div class="after_submission">
+          <ion-item class="btns">
+            <button ion-button full class="login-btn" (click)="submit_photo_gallery()">
+              <ion-icon item-start></ion-icon>&nbsp; {{lang.submit_photo}}</button>
+          </ion-item>
+        </div>
+      </ng-container>
+      <ng-template #elseTemplate3>
+        <div class="before_submission">
+          <ion-item class="btns">
+            <button ion-button full class="login-btn" (click)="take_photo('CAMERA')"><ion-icon item-start><i class="material-icons">photo_camera</i></ion-icon>&nbsp; {{lang.take_photo}}</button>
+          </ion-item>
+
+          <ion-item text-center class="or-text">
+            <span>or</span>
+          </ion-item>
+          <ion-item class="btns">
+              <button ion-button full class="refer-btn" (click)="take_photo('PHOTOLIBRARY')"><ion-icon item-start><i class="material-icons">photo_library</i></ion-icon>&nbsp; {{lang.upload_gallery}}</button>
+          </ion-item>
+        </div>
+      </ng-template>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

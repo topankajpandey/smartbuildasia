@@ -1,0 +1,25 @@
+
+<ion-header>
+    
+    <ion-navbar>
+      <ion-title>Search Address <span item-left class="edit submission-edit" (click)="cancel()">Cancel</span></ion-title>
+    </ion-navbar>
+    
+    <ion-searchbar
+      [(ngModel)]="autocomplete.query"
+      [showCancelButton]="true"
+      (ionInput)="updateSearch($event)"
+      (ionCancel)="dismiss($event)"
+      placeholder="Search for address">
+    </ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+  </ion-header>
+  
+  <ion-content class="cards-bg">
+    <div #map id="map"></div>
+  </ion-content>
+  <ion-footer></ion-footer>

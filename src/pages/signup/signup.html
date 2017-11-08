@@ -1,0 +1,74 @@
+<ion-header cache-view="false">
+  <ion-navbar color="primary">
+    <ion-title text-center>{{lang.sign_up}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <form [formGroup]="regForm" (ngSubmit)="registration()">
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.username}}</ion-label>
+        <ion-input [(ngModel)]="regData.username" formControlName="username" type="text" placeholder="john_doe"></ion-input>
+      </ion-item>
+      <!--ion-item padding-right *ngIf="regForm.get('username').errors && regForm.get('username').dirty">
+        <p color="danger" ion-text *ngIf="regForm.get('username').hasError('required')">Username is required</p>
+      </ion-item-->
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.email}}:</ion-label>
+        <ion-input [(ngModel)]="regData.email" formControlName="email" type="text" placeholder="john_doe@mail.com"></ion-input>
+      </ion-item>
+      <!--ion-item padding-right *ngIf="regForm.get('email').errors && regForm.get('email').dirty">
+        <p color="danger" ion-text *ngIf="regForm.get('email').hasError('required')">Field is required</p>
+        <p color="danger" ion-text *ngIf="regForm.get('email').hasError('email')">It is not an email</p>
+      </ion-item-->
+
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.phone_number}}</ion-label>
+        <ion-input [(ngModel)]="regData.phone" formControlName="phone" type="number" placeholder="9876876546"></ion-input>
+        <!--input [(ngModel)]="regData.phone" formControlName="phone" name="phone" #phone="ngModel" type="number" [min]="10" placeholder="9876876546"-->
+      </ion-item>
+      <!--ion-item padding-right *ngIf="regForm.get('phone').errors && regForm.get('phone').dirty">
+        <p color="danger" ion-text *ngIf="regForm.get('phone').hasError('required')">Phone is required</p>
+      </ion-item-->
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.password}}:</ion-label>
+        <ion-input [(ngModel)]="regData.password" formControlName="password" type="password" placeholder="{{lang.password}}"></ion-input>
+      </ion-item>
+      <!--ion-item padding-right *ngIf="regForm.get('password').errors && regForm.get('password').dirty">
+        <p color="danger" ion-text *ngIf="regForm.get('password').hasError('required')"></p>
+        <p color="danger" ion-text *ngIf="regForm.get('password').hasError('pattern')"></p>
+      </ion-item-->
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.confirm_password}}:</ion-label>
+        <ion-input [(ngModel)]="regData.confirm_password" formControlName="confirm_password" type="password" placeholder="{{lang.confirm_password}}"></ion-input>
+      </ion-item>
+      
+      <!--ion-item padding-right *ngIf="regForm.get('confirm_password').errors && regForm.get('confirm_password').dirty">
+        <p color="danger" ion-text *ngIf="regForm.get('confirm_password').hasError('required')"></p>
+        <p color="danger" ion-text *ngIf="regForm.get('confirm_password').hasError('pattern')">It is not a strong password</p>
+        <p color="danger" ion-text *ngIf="regForm.get('confirm_password').hasError('MatchPassword')">Password not match</p>
+      </ion-item-->
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.referral_number}}:</ion-label>
+        <ion-input [(ngModel)]="regData.referral_code" formControlName="referral_code" type="text" placeholder="REFI58RYL0"></ion-input>
+      </ion-item>
+
+      <ion-item  padding-right class="btns">
+        <button ion-button full class="login-btn" block type="submit" [disabled]="regForm.invalid">{{lang.sign_up}}</button>
+      </ion-item>
+    </form>
+	
+	<ion-item  padding-right class="btns top-50">
+            <button ion-button full class="signin-btn" (click)="login()">{{lang.login}}</button>
+          </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,50 @@
+<!--
+  Generated template for the InformationPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.create_project}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg add-project">
+    <form [formGroup]="createProjectForm" (ngSubmit)="save()">
+  <ion-list>
+    
+  <ion-item padding-right>
+      <ion-label stacked>{{lang.project_name}}</ion-label>
+      <ion-textarea  [(ngModel)]="projectData.name" formControlName="project" placeholder="Renovation of Raffles Hotel"></ion-textarea>
+    </ion-item>
+
+    <ion-item padding-right>
+    <ion-label stacked>{{lang.desc}}</ion-label>
+    <ion-textarea formControlName="desc" formControlName="desc" [(ngModel)]="projectData.description" placeholder="Renovation of first storey gallery stores and facade"></ion-textarea>
+  </ion-item>
+
+<ion-item class="add-btn mapbutton"  padding-right (click)="modal_map()">
+  <ion-label stacked>{{lang.address}}<a class="p-btn">{{lang.map}}</a></ion-label>
+  <ion-input type="text" formControlName="address" [(ngModel)]="projectData.address" placeholder="1 Beach Rd, Singapore 189673" readonly></ion-input>
+</ion-item>
+
+<ion-input type="hidden" value="{{token}}"   [(ngModel)]="projectData.token" formControlName="token"></ion-input>
+<ion-input type="hidden" value="{{user_id}}"   [(ngModel)]="projectData.user_id" formControlName="user_id"></ion-input>
+<!--  -->
+<ion-item class="btns">
+    <button ion-button full class="login-btn"  block type="submit" [disabled]="createProjectForm.invalid">{{lang.create_project}}</button>
+</ion-item>
+
+</ion-list>
+</form>
+
+<!--ion-item class="btns">
+    <button ion-button full class="login-btn" (click)="modal_map()" block type="submit" >Choose Address</button>
+</ion-item--> 
+</ion-content>
+<ion-footer></ion-footer>
+
+
+

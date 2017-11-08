@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.subm}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="cons_tab">
+      <ion-segment-button value="BusinessCard">{{lang.business_card}}</ion-segment-button>
+      <ion-segment-button value="TextOnly">{{lang.text_only}}</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="cards-bg add-project mysubmission">
+
+  <ion-list class="top-bar"> 
+
+    <ion-item class="info-list sub-org-bar">
+      <h2>{{lang.reward}}</h2>
+      <ion-note item-end text-right>${{referral_rewared_prize}}</ion-note>
+    </ion-item>
+
+
+  </ion-list>
+
+  <div [ngSwitch]="cons_tab" class="first-bl">
+
+    <ion-list *ngSwitchCase="'BusinessCard'">
+      
+      <ng-container *ngIf="base64Image; else elseTemplate">
+        <ion-item class="no-padding">
+          <div class="card-img">
+            <img src="{{base64Image}}">
+          </div>
+        </ion-item>
+      </ng-container>
+      <ng-template #elseTemplate>
+
+        <ion-item class="btns">
+          <button ion-button full class="login-btn" (click)="take_picture('CAMERA')">
+            <ion-icon item-start><i class="material-icons">photo_camera</i></ion-icon>&nbsp; {{lang.take_photo}}
+          </button>
+        </ion-item>
+
+        <ion-item text-center class="or-text">
+          <span>or</span>
+        </ion-item>
+
+        <ion-item class="btns">
+          <button ion-button full class="refer-btn" (click)="take_picture('PHOTOLIBRARY')"><ion-icon item-start><i class="material-icons">photo_library</i></ion-icon>&nbsp; {{lang.upload_gallery}}</button>
+        </ion-item>
+
+      </ng-template>
+
+      <form [formGroup]="bussiness_form" (ngSubmit)="bussiness_card_submission()" id="businessCard">
+          
+  
+          <ion-item padding-right>
+            <ion-label stacked>{{lang.company_role}}</ion-label>
+            <ion-input [(ngModel)]="consultant.company_role" formControlName="company_role" type="text" placeholder="e.g. Piling Contractor"></ion-input>
+            
+          </ion-item>
+  
+          
+          
+  
+          <ion-item padding-right>
+            <ion-label stacked>{{lang.desc}}</ion-label>
+            <ion-textarea [(ngModel)]="consultant.description" formControlName="description" placeholder="e.g. Concrete Bored Piles"></ion-textarea>
+          </ion-item>
+  
+          <!--ion-item padding-right>
+              <ion-label stacked>{{lang.photo}}</ion-label>
+              <ng-container *ngIf="photos_url == 'null'; else elseTemplatepic">
+                  {{lang.no_photo_uploaded}}
+                   </ng-container>
+                   <ng-template #elseTemplatepic>
+                       <img src="{{photos_url}}" width="100">
+                   </ng-template>
+          </ion-item-->
+  
+          <ion-item padding-right class="btns">
+            <button ion-button full class="login-btn" [disabled]="bussiness_form.invalid">{{lang.submit_info}}</button>
+          </ion-item>
+          <div class="bussiness_form_src"></div>
+        </form>
+
+      </ion-list>
+
+      
+
+     
+
+    <ion-list *ngSwitchCase="'TextOnly'">
+      <form [formGroup]="text_form" (ngSubmit)="text_card_submission()" id="testCard">
+        <ion-item padding-right>
+          <ion-label stacked>{{lang.comp_name}}</ion-label>
+          <ion-input [(ngModel)]="consultantText.company_name" formControlName="company_name" type="text" value="{{consultantTextData.company_name}}"
+            placeholder="e.g. Xyz Pvt Ltd"></ion-input>
+        </ion-item>
+
+        <ion-item padding-right>
+          <ion-label stacked>{{lang.company_role}}</ion-label>
+          <ion-input [(ngModel)]="consultantText.company_role" formControlName="company_role" type="text" value="{{consultantTextData.company_role}}"
+            placeholder="e.g. Concrete Bored Piles"></ion-input>
+        </ion-item>
+
+        <ion-item padding-right>
+          <ion-label stacked>{{lang.con_name}}</ion-label>
+          <ion-input [(ngModel)]="consultantText.contr_name" formControlName="contr_name" type="text" value="{{consultantTextData.contr_name}}"
+            placeholder="e.g. John Doe"></ion-input>
+        </ion-item>
+
+        <ion-item padding-right>
+          <ion-label stacked>{{lang.con_phone}}</ion-label>
+          <ion-input [(ngModel)]="consultantText.contr_phone" formControlName="contr_phone" type="number" value="{{consultantTextData.contr_phone}}"
+            placeholder="e.g. 7696487645"></ion-input>
+        </ion-item>
+
+        <ion-item padding-right>
+          <ion-label stacked>{{lang.contact_email}}</ion-label>
+          <ion-input [(ngModel)]="consultantText.contr_email" formControlName="contr_email" type="text" value="{{consultantTextData.contr_email}}"
+            placeholder="e.g. john_doe@gmail.com"></ion-input>
+        </ion-item>
+
+        <ion-item padding-right class="btns">
+          <button ion-button full class="login-btn" [disabled]="text_form.invalid">{{lang.submit_info}}</button>
+        </ion-item>
+      </form>
+    </ion-list>
+
+  </div>
+
+</ion-content>
+

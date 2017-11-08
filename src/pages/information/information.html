@@ -1,0 +1,72 @@
+<!--
+  Generated template for the InformationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.give_info}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg">
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)"
+    placeholder="Search for address">
+  </ion-searchbar>
+<ion-card class="adv-map">
+  <div style="position: relative">
+    <img src="assets/images/map.png">
+    <ion-fab right bottom class="add-icon">
+      <button ion-fab class="fab-map" (click)="create_project()">
+        <ion-icon name='add' ></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
+  <ion-item class="list-border page-title th">
+    <h2>Museum of Football</h2>
+  </ion-item>
+
+
+  <ion-item class="bt-nl">
+    <span item-left class="range">2.6 m</span>
+    <p class="loc-det">#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development <br><span class="tags mrTop">Top Priority</span></p>
+	<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+    <ion-item class="bt-nl">
+    <span item-left class="range">2.6 m</span>
+    <p class="loc-det">#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development <br><span class="tags mrTop">Top Priority</span></p>
+	<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+    <ion-item class="bt-nl">
+    <span item-left class="range">2.6 m</span>
+    <p class="loc-det">#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development <br><span class="tags mrTop">Top Priority</span></p>
+	<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+    <ion-item class="bt-nl">
+    <span item-left class="range">2.6 m</span>
+    <p class="loc-det">#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development <br><span class="tags mrTop">Top Priority</span></p>
+	<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+    <ion-item class="bt-nl">
+    <span item-left class="range">2.6 m</span>
+    <p class="loc-det">#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development <br><span class="tags mrTop">Top Priority</span></p>
+	<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <ion-item class="bt-nl">
+    <span item-left class="range">2.6 m</span>
+    <p class="loc-det">#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development <br><span class="tags mrTop">Top Priority</span></p>
+  	<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+
+</ion-card>
+</ion-content>

@@ -1,0 +1,19 @@
+page-editprofile {
+
+}
+
+page-editprofile ion-input { color:#5b5b5b;}
+page-editprofile .user-icon { margin-top:40px;width:90px;height:90px;}
+
+.edit-pro{position:relative;width:90px;margin: 0 auto;}
+.edit-icon{position:absolute;right:0;bottom:0;background-color:#fff4e6;background-image:url(../assets/images/edit.png);background-repeat:no-repeat;background-position:center center;height:30px;width:30px;border-radius:50%;margin:0 auto;z-index:99;}
+
+.toolbar-title-ios .edit.submission-edit {
+	margin-top: 30px;
+}
+
+page-editprofile .item-md.item-block .item-inner {
+	border-bottom: 1px solid #dedede !important;
+}
+
+page-editprofile .item-md.item-block:last-child .item-inner{border-bottom:none !important;}

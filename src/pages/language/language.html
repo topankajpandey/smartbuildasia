@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-center>language</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+    <div class="welcome-info">
+      <div class="welcome-img"><img src="assets/images/welcome.png"></div>
+      <div class="user-name">Choose Language</div>
+    </div>
+    <br><br><br><br>
+  <ion-list>
+    <ion-item padding-right class="btns">
+      <button ion-button full class="login-btn" (click)="english()">ENGLISH</button>
+    </ion-item>
+    <ion-item padding-right text-center class="or-text">
+      <span>or</span>
+    </ion-item>
+    <ion-item padding-right class="btns">
+      <button ion-button full class="login-btn" (click)="malay()">MALAY</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

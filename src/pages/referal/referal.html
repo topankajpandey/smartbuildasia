@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{lang.referal}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="refer_tab">
+      <ion-segment-button value="Pending" (click)="getSubmitionList('pending')">{{lang.pending}}</ion-segment-button>
+      <ion-segment-button value="Completed" (click)="getSubmitionList('completed')">{{lang.completed}}</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="cards-bg add-project mysubmission">
+  <div [ngSwitch]="refer_tab">
+    <ion-list *ngSwitchCase="'Pending'">
+      <ng-container *ngIf="referal_detail_len>0; else elseTemplate1">
+        <ion-item ion-item *ngFor="let referral of referal_detail" class="info-list">
+          <h2>{{referral.username}}</h2>
+          <p>{{referral.reason}}</p>
+          <ion-note item-end text-right><span>${{referral_amount}}</span><br>{{referral.date}}</ion-note>
+        </ion-item>
+      </ng-container>
+      <ng-template #elseTemplate1>
+        <ion-item class="info-list no-rec-found">
+          <p class="no-found">{{lang.no_referal}}</p>
+        </ion-item>
+      </ng-template>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Completed'">
+      <ng-container *ngIf="completed_referal_detail.length>0; else elseTemplate2">
+        <ion-item ion-item *ngFor="let comp_referral of completed_referal_detail" class="info-list">
+          <h2>{{comp_referral.username}}</h2>
+          <p>{{comp_referral.reason}}</p>
+          <ion-note item-end text-right><span>${{completed_referral_amount}}</span><br>{{comp_referral.date}}</ion-note>
+        </ion-item>
+      </ng-container>
+      <ng-template #elseTemplate2>
+        <ion-item class="info-list no-rec-found">
+          <p class="no-found">{{lang.no_referal}}</p>
+        </ion-item>
+      </ng-template>
+    </ion-list>
+
+  </div>
+
+  <ion-item class="btns sub-btn">
+    <button ion-button full class="login-btn" (click)="referfriend()"><i class="material-icons">person_add</i>&nbsp;&nbsp;&nbsp;{{lang.refer_friend}}	</button>
+  </ion-item>
+
+</ion-content>

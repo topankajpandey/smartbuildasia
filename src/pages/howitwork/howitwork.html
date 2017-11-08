@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{lang.how_works}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg project-details">
+  <ion-card no-margin>
+    <ion-slides pager>
+      <ion-slide *ngFor="let slide of slides">
+        <ion-item text-center>
+          <div class="icon-img">
+            <img src="{{slide.image_url}}">
+          </div>
+          <ng-container *ngIf="lang_type == 'mys'; else elseTemplate">
+            <h2>{{slide.title_ml}}</h2>
+            <p [innerHTML]="'' + slide.content_ml + ''"></p>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <h2 #elseTemplate>{{slide.title}}</h2>
+            <p [innerHTML]="'' + slide.content + ''"></p>
+          </ng-template>
+
+        </ion-item>
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <!--ion-item text-center>
+			<div class="slider"><img src="assets/images/slider-icon.png"></div>
+		</ion-item-->
+</ion-footer>

@@ -1,0 +1,63 @@
+<!--ion-content class="card-background-page">
+  <ion-card class="splash">
+    <img src="assets/images/splash.png"/>
+  </ion-card>
+</ion-content-->
+
+
+<div id="splash-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="splash">
+    <div class="logo">
+      <img src="assets/images/splash.png">
+    </div>
+  </div>
+</div>
+
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true" persistent="true">
+    <ion-title>{{lang.login}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-form">
+  <div text-center>
+    <img src="assets/images/login.png">
+  </div>
+  <ion-list>
+    <form [formGroup]="myForm" (ngSubmit)="authenticate()">
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.email}}:</ion-label>
+        <ion-input [(ngModel)]="loginData.login_email" formControlName="email" value="" type="text" placeholder="denys@gmail.com"></ion-input>
+      </ion-item>
+      <!--ion-item padding-right *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+            <p color="danger" ion-text *ngIf="myForm.get('email').hasError('required')">Field is required</p>
+            <p color="danger" ion-text *ngIf="myForm.get('email').hasError('email')">It is not an email</p>
+          </ion-item-->
+
+      <ion-item padding-right>
+        <ion-label stacked>{{lang.password}}:</ion-label>
+        <ion-input [(ngModel)]="loginData.login_password" formControlName="password" value="" type="password" placeholder="{{lang.password}}"></ion-input>
+      </ion-item>
+      <!--ion-item padding-right *ngIf="myForm.get('password').errors && myForm.get('password').dirty">
+            <p color="danger" ion-text *ngIf="myForm.get('password').hasError('required')">Field is required</p>
+            <p color="danger" ion-text *ngIf="myForm.get('password').hasError('pattern')">It is not a strong password</p>
+          </ion-item-->
+
+      <ion-item padding-right class="btns">
+        <button ion-button full class="login-btn" block type="submit" [disabled]="myForm.invalid">{{lang.login}}</button>
+      </ion-item>
+    </form>
+    <ion-item padding-right class="btns">
+      <button ion-button full class="signin-btn" (click)="signup_page()">{{lang.sign_up}}</button>
+    </ion-item>
+    <ion-item padding-right class="btns fr">
+      <button ion-button full text-capitalize class="forgot-btn" (click)="forgot_password()">{{lang.forgot_password}}?</button>
+    </ion-item>
+
+    <ion-item padding-right text-center class="cong-text">
+        <button ion-button (click)="language('en')">English</button>
+        <button ion-button (click)="language('mys')">Malay</button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

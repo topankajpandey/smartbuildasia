@@ -1,0 +1,54 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Give Information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+  <ion-searchbar
+    [(ngModel)]="autocomplete.query"
+    [showCancelButton]="true"
+    (ionInput)="updateSearch($event)"
+    (ionCancel)="dismiss($event)"
+    placeholder="Search for address">
+  </ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+  
+  <div #map id="map"></div>
+  <div class="search_item" style="display:none;" *ngIf="projectlength > 0">
+    <ion-item ion-item *ngFor="let mapProject of projectList" class="bt-nl">
+      <span item-left class="range">{{mapProject.distance}} km</span>
+      <p class="loc-det">{{mapProject.name}}<br><span class="tags mrTop">Top Priority</span></p>
+      <ion-icon name="ios-arrow-forward" item-right (click)="check_info(mapProject.id)"></ion-icon>
+    </ion-item>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-fab right bottom class="add-icon">
+    <button ion-fab class="fab-map" (click)="create_project()">
+      <ion-icon name='add' ></ion-icon>
+    </button>
+  </ion-fab>
+  
+
+  <div *ngIf="projectlength > 0; then thenBlock; else elseBlock"> </div>
+  
+  <ng-template #thenBlock>
+    <ion-item class="list-border">
+      <h2 class="give-info" id="toggle_active" (click)="give_info()">PROJECTS WITHIN {{area_covered}} km </h2>
+    </ion-item> 
+  </ng-template>
+
+  <ng-template #elseBlock>
+     <ion-item class="list-border">
+      <h2 class="give-info" id="toggle_active">PROJECTS WITHIN {{area_covered}} km </h2>
+    </ion-item> 
+  </ng-template>
+  
+</ion-footer>

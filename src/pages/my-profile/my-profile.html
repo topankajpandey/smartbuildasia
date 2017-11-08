@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    <ion-title>{{lang.my_profile}}<span item-left class="edit submission-edit" (click)="edit_profile()">{{lang.edit}}</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content text-center>
+  <div class="welcome-info">
+    <div class="welcome-img"><img src="assets/images/welcome.png"></div>
+    <div class="user-name" style="text-transform:capitalize">{{username}}</div>
+  </div>
+  <div text-center>
+    <div class="user-icon">
+      <ng-container *ngIf="profile_pic!='null'; else elseTemplate">
+        <img src="{{profile_pic}}">
+      </ng-container>
+      <ng-template #elseTemplate>
+        <img src="assets/images/user.jpg">
+      </ng-template>
+    </div>
+  </div>
+
+  <ion-list>
+    <ion-grid class="top-grid">
+      <ion-row>
+        <ion-col col-6>
+          <h2>${{pending_amount}}</h2>
+          <h5>{{lang.still_due}}</h5>
+        </ion-col>
+        <ion-col col-6>
+          <h2>${{redeemed_amount}}</h2>
+          <h5>{{lang.total_received}}</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <ion-list>
+    <ion-item padding-right>
+      <ion-label stacked>{{lang.contact_email}}</ion-label>
+      <ion-input type="text" value="{{email}}" disabled="true"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item padding-right>
+      <ion-label stacked>{{lang.phone}}</ion-label>
+      <ion-input type="text" value="{{phone}}" disabled="true"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-item padding-right class="btns">
+    <button ion-button full class="signin-btn" (click)="get_money()">{{lang.how_get_money}}</button>
+  </ion-item>
+</ion-footer>

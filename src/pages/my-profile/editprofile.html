@@ -1,0 +1,60 @@
+<!--
+  Generated template for the EditprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{lang.my_profile}} <span item-left class="edit submission-edit" (click)="cancel()">{{lang.cancel}}</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content text-center>
+	
+	<div text-center class="edit-pro">
+		<div class="user-icon">
+			<ng-container *ngIf="profile_pic!='null'; else elseTemplate">
+				<img id="profile_picutre_src" src="{{profile_pic}}">
+			</ng-container>
+			<ng-template #elseTemplate>
+				<img src="assets/images/user.jpg">
+			</ng-template>
+		</div>
+		<div class="edit-icon" (click)="edit_picture()"></div>
+	</div>
+	
+	<ion-list>
+			<form [formGroup]="profile_form" (ngSubmit)="update_profile()" >
+				<ion-item padding-right>
+					<ion-label stacked>{{lang.name}}</ion-label>
+					<ion-input [(ngModel)]="profileData.username" formControlName="username" type="text"></ion-input>
+				</ion-item>
+				
+			<ion-item padding-right>
+				<ion-label stacked>{{lang.email}}</ion-label>
+				<ion-input [(ngModel)]="profileData.email" formControlName="email" type="text"></ion-input>
+			</ion-item>
+			
+			<ion-item padding-right>
+				<ion-label stacked>{{lang.phone}}</ion-label>
+				<ion-input [(ngModel)]="profileData.phone" formControlName="phone" type="text"></ion-input>
+			</ion-item>
+					
+			<ion-item padding-right>
+				<ion-label stacked>{{lang.password}}</ion-label>
+				<ion-input [(ngModel)]="profileData.password" formControlName="password" value="" type="password"></ion-input>
+			</ion-item>
+							
+			<ion-item padding-right>
+				<ion-label stacked>{{lang.confirm_pasword}} </ion-label>
+				<ion-input [(ngModel)]="profileData.confirm_password" formControlName="confirm_password" type="password" value=""></ion-input>
+			</ion-item>
+			
+			<ion-item padding-right class="btns">
+				<button ion-button full class="login-btn" block type="submit" [disabled]="profile_form.invalid">{{lang.save_changes}}</button>
+			</ion-item>
+		</form>
+	</ion-list>
+</ion-content>

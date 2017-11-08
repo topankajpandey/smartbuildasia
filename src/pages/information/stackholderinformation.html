@@ -1,0 +1,32 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.submit_info}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg project-details">
+  <ion-card no-margin>
+    <ion-item class="page-pj-tl">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-9><h2>{{detail.name}}</h2></ion-col>
+          <ion-col col-3><span item-left class="mile">{{detail.distance}} km</span></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-card-header class="stack">{{lang.select_who}}</ion-card-header>
+    <ion-list class="list-values">
+      <ng-container *ngIf="stacklist_len>0">
+          <button ion-item *ngFor="let stackdata of stacklist" (click)="main_consultant(stackdata.sub_subm_type, stackdata.sub_subm_type_id)">
+              <ng-container  *ngIf="lang_type == 'mys'; else elseTemplateContent">
+            {{stackdata.sub_subm_type_ml}} 
+              </ng-container>
+              <ng-template #elseTemplateContent>{{stackdata.sub_subm_type}}</ng-template>
+            <span item-right bold>up to ${{stackdata.reward}}</span><ion-icon name="ios-arrow-forward" item-right></ion-icon></button>
+      </ng-container>
+    </ion-list>
+  </ion-card>
+</ion-content>

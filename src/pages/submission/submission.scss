@@ -1,0 +1,80 @@
+page-submission {
+
+}
+page-submission .toolbar-md {
+	padding: 4px;
+	min-height: 45px;
+}
+page-submission .segment-button{color:#FFF !important;opacity:1 !important;}
+page-submission .segment-button:first-of-type {
+    margin-right: 0px;
+    border-radius: 4px 0px 0px 4px;
+}
+page-submission .segment-button:last-of-type {
+    margin-left: 0px;
+    border-left-width: 0px;
+    border-radius: 0px 4px 4px 0px;
+}
+page-submission .segment-button.segment-activated {
+    color: #f7931e !important;
+    background-color: #FFF;
+    opacity: 1;
+	border-color: #FFF !important;
+    transition: all 0.1s linear;
+}
+.no-found{text-align: center;}
+page-submission .segment-button {
+    max-width: 80px;
+    height: 2.6rem !important;
+    font-size: 1rem !important;
+    line-height: 2.5rem !important;
+	text-overflow: inherit;
+	white-space: normal;
+	color: rgb(72, 138, 255);
+    flex: 1 1 0%;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #FFF !important;
+	-webkit-box-flex: 1;
+    width: 0px;
+	text-transform: capitalize !important;
+    line-height: 3rem;
+	padding:0 !important;
+
+}
+
+.mysubmission p{white-space: normal;}
+
+.mysubmission .item-md h2{font-weight:bold;color:#000;font-size:14pt;padding-top: 10px;}
+.mysubmission .info-list{border-bottom:1px solid #d0d2d3;}
+.mysubmission .note-md{font-size:10pt;color:#707070;margin-top: 0;}
+.mysubmission .note-md span{font-weight:bold;color:#000;font-size:14pt;}
+.mysubmission .label-md {}
+
+.sub-btn{position:fixed;bottom:20px;left:0;right:0;background: none;}
+.submission{padding-left:0;}
+.submission p{white-space: normal;}
+.sb{padding-left:0;}
+.submission .item-inner{padding-left:10px;}
+.submission-titl h2{text-transform:uppercase;color:#707070;font-size:1.5rem;}
+.submission-titl ion-note{text-transform:uppercase;color:#000;font-size:1.5rem;}
+
+.sub-org-bar{background-color:#fff4e6;padding-left:0;}
+.sub-org-bar .item-inner{padding-left:10px;}
+.submission-titl{padding-left:0;}
+.submission-titl .item-inner{padding-left:10px;}
+.sub-org-bar h2{color:#f7931e;}
+.sub-org-bar ion-note{color:#000;font-weight:bold;}
+
+.date{text-align:right;color:#707070;margin-right:0 !important;font-size:10pt;}
+
+
+page-submission .top-grid h2{font-size:2rem;color:#000000;margin:0;font-weight:600;}
+page-submission .top-grid h5{font-size:1.5rem;color:#f7931e;margin:0;font-weight:400;}
+page-submission .top-grid{margin-top:0;padding-top:15px;}
+
+.mysubmission{}
+
+page-submission .sub-btn .label-md, page-submission .sub-btn .label-ios{
+	padding: 0 40px;
+}

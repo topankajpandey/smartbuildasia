@@ -1,0 +1,158 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(materialIcons.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+.toolbar-md-primary .toolbar-background-md, .toolbar-ios-primary .toolbar-background-ios {
+	background: #f7931e;
+}
+.toolbar-background-ios {
+	background: #f7931e;
+}
+
+
+.bar-buttons-ios {
+	top: 25px !important;
+}
+.back-button-text{font-size: 1.3rem;}
+
+.toolbar-title-md {
+  font-size: 1.8rem;
+}
+
+.toolbar-title-ios{color:#FFF;}
+.menu-inner .toolbar-title-ios{text-align:left;width:auto !important;}
+
+
+.left-nav .label-md{font-weight:bold;color:#000000;font-size: 1.8rem;}
+.left-nav .item-inner{border-bottom:none !important;}
+
+.user-img{width:60px;height:60px;border-radius:50%;overflow:hidden;top: 11px;left: 15px;position:absolute;}
+.toolbar-content-ios .user-img{top: 25px;}
+.main-tl {padding-left: 70px;padding-top: 15px;padding-bottom: 15px;}
+.main-tl span{font-weight:300;}
+
+.footer-nav .label-md{color:#707070;font-weight:400;}
+.footer-nav  .item-inner{border-bottom:none !important;}
+.footer-nav {margin-bottom: 0;}
+
+.header .button-inner{color:#FFF;}
+
+.header .toolbar-md{position:relative;}
+.header .toolbar .back-button, .header .toolbar .bar-button{position:absolute;z-index:99;top: 13px;}
+.header .toolbar .toolbar-title{text-align:center !important;}
+.main-tl{text-align:left !important;}
+.header .toolbar .main-tl .toolbar-title {text-align: left !important;}
+
+.default-img img {display: block;width: 100%;max-width: 200px;margin: 0 auto;}
+/* .login-form ion-label {margin: 8px 8px 8px 0;} */
+.login-form .fr .item-button{font-size:1.4rem;}
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md {font-size: 11pt;}
+.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {height: 0;}
+
+
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.default-img {
+	width: 130px;
+	height:120px;
+	overflow: hidden;
+	margin: 25pt auto 0;
+}
+.default-img img {
+	display: inline-block;
+	width: 250px;
+	max-width: 250px;
+	margin: 0 auto;
+	
+}
+.img-head {
+	font-size: 1.5rem !important;
+	color: #ced1d1 !important;
+	text-align: center;
+	line-height: 1.1 !important;
+	margin-bottom:10pt;
+}
+
+.left-nav.list-ios{padding-top:82px;}
+.back-button.back-button-ios {
+	margin-top: 12px;
+}
+
+.header ion-list{margin-bottom:0;}
+.searchbar-ios{background:#f7931e;}
+.searchbar-ios.searchbar-left-aligned .searchbar-input{
+	background-color: #d9801a;
+	-webkit-box-shadow: inherit;
+	box-shadow: inherit;
+	color: #FFF;
+}
+.left-nav .label-ios {
+	font-weight: 600;
+	color: #000000;
+	font-size: 1.8rem;
+}
+.footer-nav .label-ios {
+	color: #707070;
+	font-weight: 400;
+}
+

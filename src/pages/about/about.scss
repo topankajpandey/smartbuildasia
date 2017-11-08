@@ -1,0 +1,36 @@
+page-about {
+
+}
+
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md, .label-ios[stacked] {
+	color: #f7931e;
+	font-size:12pt;
+}
+
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child{}
+
+.item-md .item-button, .item-ios .item-button {
+	padding: 0 0.6em;
+	height: 50px;
+	font-size: 1.2rem;
+	font-size: 13pt;
+	border-radius:50px;
+	text-transform: capitalize;
+	box-shadow: inherit !important;
+
+}
+
+.login-btn{background:#2e3192;magin-bottom:40pt;}
+.signin-btn{background:#fff4e6;color:#f7931e;}
+.signin-btn:hover, .signin-btn:focus{background:#f7931e !important;color:#FFF !important;}
+.forgot-btn{background:none;color:#707070;opacity:0.9;height: 35px !important;margin:0 !important;}
+.forgot-btn:hover, .forgot-btn:focus{background:none !important;color:#707070 !important;}
+.btns .item-inner{border-bottom:0 !important;}
+.fr .label{margin:0 !important;}
+
+.forgot-btn .button-inner{font-size:1.5rem;}
+
+
+.toolbar-ios-primary .toolbar-title-ios, .toolbar-ios-primary .bar-button-clear-ios, .toolbar-ios-primary .bar-button-default-ios {
+	top: 25px !important;
+}

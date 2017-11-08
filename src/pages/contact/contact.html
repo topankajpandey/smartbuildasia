@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{lang.contact}}    
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+
+  <ion-list>
+
+    <ion-item padding-right text-center class="cong-text">
+      <h2>{{lang.contact_heading1}}<br> {{lang.contact_heading2}}</h2>
+      <p>{{lang.feedback1}}<br> {{lang.feedback2}}.</p>
+    </ion-item>
+
+    <ion-item padding-right class="btns">
+      <a class="email_us" href="mailto:contact@smartbuild.asia"><button ion-button full class="login-btn"><ion-icon ios="ios-mail" md="md-mail"></ion-icon>&nbsp;  {{lang.email}}</button></a>
+    </ion-item>
+    <ion-item padding-right text-center class="or-text">
+      <span>or</span>
+    </ion-item>
+    <ion-item padding-right class="btns">
+      <a href="tel:65 3159 0308" class="email_us"><button ion-button full class="refer-btn"><ion-icon ios="ios-call" md="md-call"></ion-icon>&nbsp;  {{lang.call}} </button></a>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+</ion-footer>

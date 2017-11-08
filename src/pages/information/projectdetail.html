@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.project_details}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg project-details">
+  <div #map id="map" style="height:30%;"></div>
+  <ion-card no-margin>
+    <ion-item class="page-pj-tl">
+      <ion-grid ion-item *ngFor="let project_data of project_detail">
+        <ion-row>
+          <ion-col col-9>
+            <h2>{{project_data.name}}</h2>
+          </ion-col>
+          <ion-col col-3><span item-left class="mile">{{project_data.distance}} km</span></ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item class="list-vw">
+        <span class="wanted-info">&nbsp;&nbsp;&nbsp;<span><ion-icon name="information-circle" item-start></ion-icon></span>{{lang.wanted_info}}</span>
+        <span class="tags" *ngIf="priority === 1">
+          {{lang.top_priority}}
+        </span>
+
+        <ul>
+          <ng-container *ngIf="wanted_information_len > 0; else elseTemplate0">
+              <li *ngFor="let winfo of wanted_information">{{winfo}}</li>
+          </ng-container>
+          <ng-template #elseTemplate0>
+              <li>{{lang.not_applicable}}</li>
+          </ng-template>
+        </ul>
+      </ion-item>
+    </ion-item>
+
+
+    <ion-card-header>
+      {{lang.what_to_submit}}
+    </ion-card-header>
+    <ion-list class="list-info pd-detail">
+      <ng-container *ngIf="lang_type == 'mys'; else elseTemplate">
+        <button ion-item (click)="site_photo('site_photo', 'Foto Tapak')">
+          <ion-icon item-start><i class="material-icons">photo_camera</i></ion-icon>
+          {{lang.site_photo}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+        </button>
+
+        <button ion-item (click)="site_photo('project_list_photos', 'Foto Senarai Projek')">
+          <ion-icon item-start><i class="material-icons">photo_library</i></ion-icon>
+          {{lang.project_list}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+        </button>
+
+
+        <button ion-item (click)="site_photo('sign_board_photo', 'Tandakan Photo Board')" *ngIf="sign_board_status==1">
+          <ion-icon item-start><i class="material-icons">store_mall_directory</i></ion-icon>
+          {{lang.sign_board}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+        </button>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <button ion-item (click)="site_photo('site_photo', 'Site Photo')">
+            <ion-icon item-start><i class="material-icons">photo_camera</i></ion-icon>
+            {{lang.site_photo}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+        </button>
+
+        <button ion-item (click)="site_photo('project_list_photos', 'Project List Photos')">
+            <ion-icon item-start><i class="material-icons">photo_library</i></ion-icon>
+            {{lang.project_list}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+        </button>
+
+
+        <button ion-item (click)="site_photo('sign_board_photo', 'Sign Board Photo')" *ngIf="sign_board_status==1">
+            <ion-icon item-start><i class="material-icons">store_mall_directory</i></ion-icon>
+            {{lang.sign_board}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+        </button>
+
+      </ng-template>
+
+      <button ion-item (click)="stackholder_information()">
+        <ion-icon item-start><i class="material-icons">assignment</i></ion-icon>
+        {{lang.stack_info}} <ion-icon name="ios-arrow-forward" item-right class="arw"></ion-icon>
+      </button>
+
+
+    </ion-list>
+  </ion-card>
+</ion-content>

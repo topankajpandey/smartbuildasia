@@ -1,0 +1,71 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{lang.give_info}}</ion-title>
+  </ion-navbar>
+    <ion-searchbar
+    [(ngModel)]="autocomplete.query"
+    [showCancelButton]="true"
+    (ionInput)="updateSearch($event)"
+    (ionCancel)="dismiss($event)"
+    placeholder="{{lang.search_for_address}}">
+  </ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+  
+  <div #map id="map" data-tap-disabled="true"></div>
+  <ion-fab right bottom class="add-icon mp">
+      <button ion-fab class="fab-map" (click)="create_project()">
+        <ion-icon name='add' ></ion-icon>
+      </button>
+    </ion-fab>
+</ion-content>
+
+<ion-footer>
+
+
+  <div class="show_all">
+    <div *ngIf="projectlength > 0; then thenBlock; else elseBlock"> </div>
+    <ng-template #thenBlock>
+      
+      <ion-item class="list-border">
+        <h2 class="give-info" id="toggle_active" (pan)="give_info()">{{lang.projects_with}} {{area_covered}} KM </h2>
+        <h2 class="give-info give_info_after" id="toggle_active" (pan)="give_info_after()" style="display:none;">{{total_count_project}} {{lang.project_found}}</h2>
+        
+        <div class="search_item" style="display:none;" *ngIf="projectlength > 0">
+          <ion-item ion-item *ngFor="let mapProject of projectList" class="bt-nl" item-right (click)="check_info(mapProject.id)">
+            <ng-container *ngIf="mapProject.id == 0; else elseTemplate"></ng-container>
+            <ng-template #elseTemplate>
+              <span item-left class="range">{{mapProject.distance}} km</span>
+              <p class="loc-det">
+                  {{mapProject.name}}<br>
+                  <ng-container *ngIf="mapProject.priority==1; else elseTemplate">
+                      <span class="tags mrTop">{{lang.top_priority}}</span>
+                  </ng-container>
+                  <ng-template #elseTemplate>
+                      <span class="tags mrTop">{{lang.no_priority}}</span>
+                  </ng-template>
+              </p>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ng-template>
+          </ion-item>
+        </div>
+      </ion-item> 
+
+    </ng-template>
+    <ng-template #elseBlock>
+      <ion-item class="list-border">
+        <h2 class="give-info" id="toggle_active">{{lang.projects_with}} {{area_covered}} KM </h2>
+      </ion-item> 
+    </ng-template>
+  </div>
+
+  <div class="show_single" style="display:none;"></div>
+</ion-footer>

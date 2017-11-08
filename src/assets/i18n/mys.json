@@ -1,0 +1,51 @@
+{
+    "login": "Log Masuk",
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "sign_up": "Daftar Masuk",
+    "forgot_password": "Lupa Kata Laluan",
+
+    "welcome_user":	"Selamat Datang", 
+    "give_info":	"Beri Maklumat",	   
+    "or":	"Atau",	   
+    "refer_friend":	"Rujuk pada Kawan",  
+    "congratulations":	"Tahniah",	   
+    "earned": "Anda telah berjaya memperolehi ",
+    "total_of": "sejumlah",
+    "last_week": "dari minggu lepas",  
+    "so_far": "setakat ini",
+    "submission_button" : "Penyerahan Saya",
+
+    "home_page":	"Halaman Utama",	   
+    "my_submissions":	"Penyerahan Saya",	   
+    "my_referrals":	"Rujukan",	   
+    "how_it_works":	"Cara ia berfungsi",
+    "language" : "bahasa",
+    "terms_and_conditions":	"Terma dan Syarat",	   
+    "contact_us":	"Hubungi Kami",   
+    "log_out":	"Log Keluar", 
+
+
+    "my_profile":"Profil Saya",  
+    "edit":"Edit",	   
+    "still_due":"Jumlah Tertunggak",	   
+    "total_received":"TotJumlah Diterimad",	   
+    "contact_email":"E-mel",	   
+    "phone":"Telefon",	   
+    "how_get_money":"Cara mendapatkan duit saya",
+
+    "back":"Kembali",   
+    "cancel":"Batal",	     	   
+    "confirm_pasword"	:"Sah Kata Laluan",	   
+    "save_changes":	"Simpan Perubahan",
+    
+    "money": "Pendapatan",
+    "how_do_get_money":	"Cara mendapatkan duit saya",
+    "to_money_smartbuild" : "Smartbuild Asia berhutang anda atas sumbangan besar anda. Pembayaran anda bergantung pada pilihan cara pembayaran yang disediakan.",
+    "alternative": "-------------",
+    "smartbuild_asia_owes" : "Smartbuild Asia berterima kasih kepada anda untuk sumbangan besar anda. P Pembayaran anda bergantung pada pilihan cara pembayaran yang disediakan.",
+    "cash_cheque":	"tunai dan cek",	   
+    "come_to_our_office" : "Sila datang ke pejabat kami pada setiap hari bulan pertama dan ke-15.", 
+    "locate_us" : "Lokasi"
+
+  }

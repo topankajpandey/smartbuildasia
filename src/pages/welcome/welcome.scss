@@ -1,0 +1,27 @@
+	page-welcome {
+
+}
+
+.toolbar-background-md {background: #f7931e;}
+.toolbar-title-md {color: #FFF;}
+.user-icon {width: 70px;height: 70px;overflow: hidden;border-radius: 50%;margin: -40px auto 20px;position: relative;z-index: 1;}
+.user-name{font-size:18px;color:#FFF;}
+.user-name span{text-transform: capitalize;}
+.welcome-info{position:relative;}
+.user-name{position:absolute;left:0;right:0;top:15%;font-size:18pt;font-weight:bold;}
+
+.refer-btn{background:#f7931e;color:#FFF;}
+.refer-btn:hover, .refer-btn:focus{background:#e78007 !important;color:#FFF !important;}
+
+.or-text .label {
+	margin: 5px 0 !important;
+}
+
+.btns .label {
+	margin: 5px 0 !important;
+}
+
+.btns img{width:80%;max-width:40px;}
+
+
+page-welcome .refer-btn{text-transform:none !important;}

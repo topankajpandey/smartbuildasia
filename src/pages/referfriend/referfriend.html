@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{lang.refer_friend}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="refer">
+  <div text-center class="welcome-info">
+    <div class="welcome-img"><img src="assets/images/welcome.png"></div>
+    <div class="user-name">{{lang.earnby}}<br>{{lang.referring}}</div>
+  </div>
+  <div text-center>
+    <div class="user-icon"><img src="assets/images/refer.png"></div>
+
+  </div>
+
+  <ion-item text-center class="refer-field">
+    <ion-label stacked>{{lang.code}}</ion-label>
+    <ion-input type="text" value="{{referral}}" readonly text-center></ion-input>
+  </ion-item>
+  <ion-item text-center>
+    <p>{{lang.code_desc1}} <br>{{lang.code_desc2}} <br>{{lang.code_desc3}} <span>${{referral_rewared_prize}}</span>.</p>
+  </ion-item>
+  <ion-list class="list-info social">
+    <button ion-item (click)="facebook_share()">
+      <ion-icon class="messager" item-start><img src="assets/images/messager.png"></ion-icon>Messenger<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </button>
+
+    <button ion-item (click)="whatsapp_share()">
+      <ion-icon class="Whatsapp" item-start><img src="assets/images/whatsapp.png"></ion-icon>Whatsapp<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </button>
+
+    <button ion-item (click)="more_share()">
+      <ion-icon class="More" item-start><img src="assets/images/more.png"></ion-icon>{{lang.more}}<ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </button>
+
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,72 @@
+page-referal {
+
+}
+
+
+page-referal .toolbar-md {
+	padding: 4px;
+	min-height: 45px;
+}
+page-referal .segment-button{color:#FFF !important;opacity:1 !important;}
+page-referal .segment-button:first-of-type {
+    margin-right: 0px;
+    border-radius: 4px 0px 0px 4px;
+}
+page-referal .segment-button:last-of-type {
+    margin-left: 0px;
+    border-left-width: 0px;
+    border-radius: 0px 4px 4px 0px;
+}
+page-referal .segment-button.segment-activated {
+    color: #f7931e !important;
+    background-color: #FFF;
+    opacity: 1;
+	border-color: #FFF !important;
+    transition: all 0.1s linear;
+}
+
+page-referal .segment-button {
+    
+    height: 2.6rem !important;
+    font-size: 1.2rem;
+    line-height: 2.5rem !important;
+}
+
+page-referal .segment-button {
+    -webkit-box-flex: 1;
+    width: 0px;
+    height: 3.2rem;
+    font-size: 1.3rem !important;
+	text-transform: capitalize !important;
+    line-height: 3rem;
+    color: rgb(72, 138, 255);
+    flex: 1 1 0%;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #FFF !important;
+}
+
+
+
+.refer{} 
+.refer .user-name{top: 10%;}
+.refer .user-icon{width:100px;height:100px;margin: -50px auto 20px;}
+
+.messager{}
+.Whatsapp{}
+.More{}
+
+.social button img{width:80%;max-width:58px;}
+.social button ion-icon{color:#d0d2d3 !important;}
+.social .item-inner{border-bottom:0px !important;}
+.refer .item-md p{font-size:1.6rem;}
+.refer .item-md p span{color:#f7931e !important;font-weight:bold !important;}
+
+.refer-field ion-label{color:#707070 !important;}
+.refer-field ion-input{color:#000;font-weight:bold;font-size:2.2rem;border-bottom:2px dashed #f7931e;}
+page-referal .item-inner{border-bottom:0 !important;padding-left:10px;}
+page-referal .item{padding-left:0;}
+page-referal .top-grid{margin-top:0;padding-top:15px;}
+
+page-referal .login-btn img{max-width:25px;}
+page-referal .sub-btn .label-md, page-referal .sub-btn .label-ios{padding:0 40px;}

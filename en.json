@@ -1,0 +1,160 @@
+{
+    
+    "login": "Login",
+    "email": "Email",
+    "password": "Password - min 6 characters",
+    "sign_up": "Sign Up",
+	"reset": "Reset",
+    "forgot_password": "Forgot Password",
+	
+	 
+	"username":	"Username",   	   
+	"phone_number":	"Phone Number",
+	"confirm_password":	"Confirm Password",
+	"registration_successful":	"Registration Successful",
+	"referral_number": "Referral Number",
+     
+    "welcome_user":	"Welcome", 
+    "give_info":	"Give Information",	   
+    "or":	"Or",	   
+    "refer_friend":	"Refer a Friend",  
+    "congratulations":	"Congratulations",	   
+    "earned": "You have earned",
+    "total_of": "a total of",
+    "last_week": "last week",  
+    "so_far": "so far",
+    "submission_button" : "My Submissions",
+
+
+     
+    "home_page":	"Home",	   
+    "my_submissions":	"My Submissions",	   
+    "my_referrals":	"My Referrals",	   
+    "how_it_works":	"How It Works",
+    "language" : "Language",	   
+    "terms_and_conditions":	"Terms and Conditions",	   
+    "contact_us":	"Contact Us",   
+    "log_out":	"Log Out",
+	
+	"create_project": "Create Project",
+	"project_name" : "Project Name",
+	"desc" : "Description",
+	"address" : "Address",
+	"map" : "Map",
+	"search_for_address": "Search for address",
+	
+
+        
+    "my_profile":"My Profile",  
+    "edit":"Edit",	   
+    "still_due":"Still Due",	   
+    "total_received":"Total received",	   
+    "contact_email":"Contact Email",	  
+	"visiting_card": "Visiting Card",
+    "phone":"Phone",	   
+    "how_get_money":"How to Get my Money",
+
+     
+    "back":"Back",   	   
+    "cancel":"Cancel",	   
+    "name":"Name",	   	   
+    "confirm_pasword"	:"Confirm Pasword",	   
+    "save_changes":	"Save Changes",
+
+     
+    "money": "Money",
+    "how_do_get_money":	"How do I get my money?",
+    "to_money_smartbuild" : "To the money Smartbuild Asia owes you for your great contribution depends on your payment reference",
+    "alternative": "-------------",
+    "smartbuild_asia_owes" : "Smartbuild Asia owes many thanks to you for your great contribution, as such how you get your payment depends on your payment preference.",
+    "cash_cheque":	"Cash & Cheque",	   
+    "come_to_our_office" : "Come to our office every 1st and 15th day of the month.", 
+    "locate_us" : "Locate Us",
+	
+	"terms" : "Terms & Conditions",
+	"contact" : "Contact Us",
+	"contact_heading1" : "Please contact us",
+	"contact_heading2" : "for any problem",
+	"feedback1" : "We will be happy to have your feedback",
+	"feedback2" : "to improve the App",
+	"call" : "Call Us",
+	"submission" : "My Submissions",
+	
+	"all" : "All",
+	"pending" : "Pending",
+	"accepted" : "Accepted",
+	"partially" : "Partially Accepted",
+	"rejected" : "Rejected",
+	
+	"no_record" : "No Record Found",
+	"referal" : "My Referral",
+	"completed" : "Completed",
+	"no_referal" : "No referral found",
+	"refer_friend" : "Refer a Friend",
+	
+	"how_works": "How It Works",
+	
+	"money" : "Money",
+	"how_get1" : "How do I get my",
+	"how_get2" : "money?",
+	"desc1" : "To the money Smartbuild Asia owes you for",
+	"desc2" : "your great contribution depends on your",
+	"desc3" : "payment reference",
+    "cash" : "Cash and Cheque",
+    "text1" : "Come to our office every 1st and 15th",
+    "text2" : "day of the month",
+    "locate" : "Locate Us",
+    "masjid" : "29B Mosque,",
+    "earnby" : "Earn by",
+    "referring" : "referring",
+    "code" : "Use this Code",
+    "code_desc1" : "Refer a friend and be rewarded for that!",
+    "code_desc2" : "When your friend submits the information for",
+    "code_desc3" : "a first time, gain",
+    "msgnr" : "Messenger",
+    "more" : "More",
+	
+	"project_details" : "Project Details",
+	"wanted_info" : "Wanted Information",
+    "top_priority" : "Top Priority",
+    "no_priority" : "No Priority",
+	"what_to_submit": "Select what to submit",
+	"site_photo" : "Site Photo",
+	"project_list" : "Project List Photos",
+	"sign_board" : "Signboard Photo",
+	"stack_info" : "Stakeholder Information",
+	"not_applicable" : "Not applicable",
+	"not_available" : "Not Available",
+	"no_photo_uploaded": "No photo uploaded",
+	
+	"submit_info" : "Submit Information",
+	"select_who" : "Select Who" ,
+
+    "business_card" : "Business Card",
+    "text_only" : "Text Only",
+    "reward" : "Reward",
+    "company_role" : "Company Role"	,
+	"comp_name" : "Company Name",
+	"con_phone" : "Contact Phone Number",
+	"con_name" : "Contact Name",
+	"subm" : "Submission",
+	"take_photo" : "Take Photo",
+	"photo" : "Photo",
+	"of_site" : "of project site",
+	"submit_photo" : "Submit Photo",
+	"upload_gallery" : "Upload From Gallery",
+	"projects_with" : "PROJECTS WITHIN",
+	"project_found" : "PROJECTS FOUND",
+	"details" : "Details",
+	"for_example": "e.g.",
+	"submisison":"My Submission",
+	"comment" : "Comment"
+	
+	
+	
+	
+	
+	
+	
+
+}

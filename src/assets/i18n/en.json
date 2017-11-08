@@ -1,0 +1,58 @@
+{
+    
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "sign_up": "Sign Up",
+    "forgot_password": "Forgot Password",
+
+     
+    "welcome_user":	"Welcome", 
+    "give_info":	"Give Information",	   
+    "or":	"Or",	   
+    "refer_friend":	"Refer a Friend",  
+    "congratulations":	"Congratulations",	   
+    "earned": "You have earned",
+    "total_of": "a total of",
+    "last_week": "last week",  
+    "so_far": "so far",
+    "submission_button" : "My Submissions",
+
+
+     
+    "home_page":	"Home",	   
+    "my_submissions":	"My Submissions",	   
+    "my_referrals":	"My Referrals",	   
+    "how_it_works":	"How It Works",
+    "language" : "Language",	   
+    "terms_and_conditions":	"Terms and Conditions",	   
+    "contact_us":	"Contact Us",   
+    "log_out":	"Log Out",
+
+        
+    "my_profile":"My Profile",  
+    "edit":"Edit",	   
+    "still_due":"Still Due",	   
+    "total_received":"Total received",	   
+    "contact_email":"Contact Email",	   
+    "phone":"Phone",	   
+    "how_get_money":"How to Get my Money",
+
+     
+    "back":"Back",   	   
+    "cancel":"Cancel",	   
+    "name":"Name",	   	   
+    "confirm_pasword"	:"Confirm Pasword",	   
+    "save_changes":	"Save Changes",
+
+     
+    "money": "Money",
+    "how_do_get_money":	"How do I get my money?",
+    "to_money_smartbuild" : "To the money Smartbuild Asia owes you for your great contribution depends on your payment reference",
+    "alternative": "-------------",
+    "smartbuild_asia_owes" : "Smartbuild Asia owes many thanks to you for your great contribution, as such how you get your payment depends on your payment preference.",
+    "cash_cheque":	"Cash & Cheque",	   
+    "come_to_our_office" : "Come to our office every 1st and 15th day of the month.", 
+    "locate_us" : "Locate Us"
+
+}

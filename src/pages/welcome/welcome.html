@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar hideBackButton="true" persistent="true">
+	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>SmartBuild Asia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center>
+	<div class="welcome-info">
+	  <div class="welcome-img"><img src="assets/images/welcome.png"></div>
+	  <div class="user-name">{{lang.welcome_user}},<br><span>{{username}}</span></div>
+	</div>
+	<div text-center>
+		<div class="user-icon"><ng-container *ngIf="profile_pic!='null'; else elseTemplate">
+				<img src="{{profile_pic}}">
+			</ng-container>
+			<ng-template #elseTemplate>
+				<img src="assets/images/user.jpg">
+			</ng-template></div>
+	</div>
+  <ion-list>
+
+  <ion-item padding-right class="btns">
+
+    <button ion-button full class="login-btn" (click)="map_view()"><ion-icon><i class="material-icons">playlist_add</i></ion-icon>&nbsp; {{lang.give_info}}</button>
+	<!-- <button ion-button full class="login-btn" (click)="give_info()"><ion-icon><img src="assets/images/give-info.png"></ion-icon>&nbsp; Give Information</button> -->
+  </ion-item>
+  <ion-item padding-right  text-center class="or-text">
+	<span>or</span>
+  </ion-item>
+   <ion-item padding-right class="btns">
+    <button ion-button full class="refer-btn" (click)="refer_friend()"><ion-icon><i class="material-icons">person_add</i></ion-icon>&nbsp; {{lang.refer_friend}}</button>
+  </ion-item>
+
+  <ion-item padding-right text-center class="cong-text">
+  <p>{{lang.congratulations}}! {{lang.earned}}<br> {{lang.total_of}} ${{total_ammount}} {{lang.so_far}}!</p>
+  </ion-item>
+
+   <ion-item padding-right class="btns">
+    <button ion-button full class="signin-btn" (click)="my_submission()">{{lang.submission_button}}</button>
+  </ion-item>
+
+  </ion-list>
+</ion-content>

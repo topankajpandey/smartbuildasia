@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "942182421718",
+    "firebase_url": "https://smart-build-asia.firebaseio.com",
+    "project_id": "smart-build-asia",
+    "storage_bucket": "smart-build-asia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942182421718:android:1e8196f86784e76d",
+        "android_client_info": {
+          "package_name": "io.ionic.smartbuildasia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942182421718-jl871ul8qeqkar0lctde6k19foo330dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.smartbuildasia",
+            "certificate_hash": "2e466afa8cbfd355e2630d0549c3b535e7a1490c"
+          }
+        },
+        {
+          "client_id": "942182421718-ug00kl7kksfdck47ko6eaa9a48q0552b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvdBxfr1wr2oGRUGIdTs7q8j5PvpIWoy8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942182421718-ug00kl7kksfdck47ko6eaa9a48q0552b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
